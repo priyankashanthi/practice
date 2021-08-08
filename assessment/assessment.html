@@ -1,1 +1,203 @@
-
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="assets/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css'> -->
+</head>
+<body>
+<div class="topnav content">
+  <div class="search" role="button" tabindex="0" style="">
+   <img src="assets/search.svg" style="padding-right: 10px;">Search
+  </div> 
+  <a href=""> 
+    <img src="assets/profile_picture.svg" style="width: 70%;"></a>
+  <a href=""> 
+    <img src="assets/bell.svg" style="width: 140%;" class="mt-10"></a>
+  <a href=""> 
+    <img src="assets/cog.svg" style="width: 140%;" class="mt-10">
+  </a>
+</div>
+<div class="sidebar">
+  <a href="" class="active">
+    <img src="assets/logo.svg" style="border-bottom: 1px solid #f1f1f1;">
+  </a>
+  <a href="">
+    <img src="assets/home.svg" class="item">
+    <span>Home</span>
+  </a>
+  <a href="" class="act">
+    <img src="assets/folder-Selected.svg" class="item" onclick="openCity('London')">
+    <span>Org Folders</span>
+  </a>
+</div>
+<div class="topnav content" style="height: 45px;font-size:13px;color: #868282;">
+    <div class="flex">
+      <p>Org Folders</p>
+      <i class="fa fa-angle-right" style="padding: 14px;"></i>
+      <p class="color-black">Jan 2021</p>
+    </div>
+</div>
+<div class="content flex">
+  <div class="folder">
+    <div class="flex">
+      <img src="assets/Folder.svg">
+      <div class="folder-1" style="padding-top: 10px;">
+        <span class="" style="padding-left: 10px;">Folder 1</span>
+        <span class="" style="padding-left: 30px;">(235)</span>
+      </div>
+    </div>
+    <div class="flex">
+      <img src="assets/heart filled.svg">
+      <div class="folder-1" style="padding-left: 115px;">
+        <img src="assets/info.svg" data-toggle="modal" data-target="#myModal2">
+        <img src="assets/3_dot.svg">
+      </div>
+    </div>
+   </div>
+   <div class="folder">
+    <div class="flex">
+      <img src="assets/Folder.svg">
+      <div class="folder-1" style="padding-top: 10px;">
+        <span class="" style="padding-left: 10px;">Folder 2</span>
+        <span class="" style="padding-left: 30px;">(234)</span>
+      </div>
+    </div>
+    <div class="flex">
+      <img src="assets/heart filled.svg">
+      <div class="folder-1" style="padding-left: 115px;">
+        <img src="assets/info.svg">
+        <img src="assets/3_dot.svg">
+      </div>
+    </div>
+   </div>
+   <div class="folder">
+    <div class="flex">
+      <img src="assets/Folder.svg">
+      <div class="folder-1" style="padding-top: 10px;">
+        <span class="" style="padding-left: 10px;">Folder 3</span>
+        <span class="" style="padding-left: 30px;">(234)</span>
+      </div>
+    </div>
+    <div class="flex">
+      <img src="assets/heart filled.svg">
+      <div class="folder-1" style="padding-left: 115px;">
+        <img src="assets/info.svg">
+        <img src="assets/3_dot.svg">
+      </div>
+    </div>
+   </div>
+   <div class="folder">
+    <div class="flex">
+      <img src="assets/Folder.svg">
+      <div class="folder-1" style="padding-top: 10px;">
+        <span class="" style="padding-left: 10px;">Folder 4</span>
+        <span class="" style="padding-left: 30px;">(212)</span>
+      </div>
+    </div>
+    <div class="flex">
+      <img src="assets/heart filled.svg">
+      <div class="folder-1" style="padding-left: 115px;">
+        <img src="assets/info.svg">
+        <img src="assets/3_dot.svg">
+      </div>
+    </div>
+   </div>
+</div>
+<div class="container demo">
+  <!-- <div class="text-center">
+    <button type="button" class="btn btn-demo" data-toggle="modal" data-target="#myModal2"> Right Sidebar Modal </button>
+  </div> -->
+  <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <div class="flex">
+            <img src="assets/Folder.svg"> 
+            <p style="padding-left: 10px;">Folder 1</p>
+          </div>
+        </div>
+        <div class="modal-body">
+         <div class="flex tab" style="border-bottom: 1px solid #aaaaaa5e;">
+              <p class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">
+               Details
+              </p>
+              <p style="margin-left: 10px;" class="tablinks" onclick="openCity(event, 'Paris')">
+                Comments
+              </p>
+         </div>
+         <div id="London" class="tabcontent">
+          <div class="row">
+            <div class="column">
+              <p>Type</p>
+              <p>Location</p>
+              <p>Owner</p>
+              <p>Opened at</p>
+              <p>Created at</p>
+            </div>
+            <div class="column">
+              <p>Org Folder</p>
+              <p>Org Folders/Jan 2021</p>
+              <p>Aditya RM</p>
+              <p>Jun 23,2021</p>
+              <p>May 26,2021</p>
+            </div>
+          </div>
+        </div>
+        <div id="Paris" class="tabcontent">
+          <div class="Comment-1">
+            <div class="flex">
+              <img src="assets/profile_picture.svg">
+              <img src="assets/comment.svg" class="mes"> 
+              <p class="color-black">Eduardo benz</p>
+            </div>
+              <span style="color: #868282;">3 mins ago</span>
+              <p>you agree to have read</p>
+          </div>
+          <div class="Comment-2">
+            <div class="flex">
+              <img src="assets/profile_picture.svg">
+              <img src="assets/comment.svg" class="mes"> 
+              <p class="color-black">Eduardo benz</p>
+            </div>
+            <span style="color: #868282;">3 mins ago</span>
+              <p>you agree to have read</p>
+          </div>
+          <div class="textarea">
+            <textarea name="textarea" rows="5" cols="30"></textarea>
+          </div>
+          <div class="mt-2">
+            <button type="reset" value="Reset">cancel</button>
+            <button type="submit" value="Submit" class="comments">comment</button>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  function openCity(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+  }
+  // Get the element with id="defaultOpen" and click on it
+  document.getElementById("defaultOpen").click();
+  </script>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+<script src='https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js'></script>
+</body>
+</html>
